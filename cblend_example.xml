@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CBlend xmlns="http://contentrepurpose.com/cblend"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://contentrepurpose.com/cblend cblend_schema.xsd"
+        id="BL001"
+        status="completed"
+        version="1.0"
+        createdDate="2026-02-06T08:00:00Z"
+        lastModified="2026-02-07T16:30:00Z">
+
+    <!-- Blend Metadata -->
+    <Metadata>
+        <n>Product Launch Blog Post</n>
+        <Description>Comprehensive blog post announcing our new AI analytics platform</Description>
+        <Purpose>Generate awareness and interest for product launch</Purpose>
+        <CreatedBy>Sarah Johnson</CreatedBy>
+        <Team>Marketing Content Team</Team>
+        <CreatedDate>2026-02-06T08:00:00Z</CreatedDate>
+        <LastModified>2026-02-07T16:30:00Z</LastModified>
+        <LastModifiedBy>Mike Chen</LastModifiedBy>
+        <DueDate>2026-02-07T17:00:00Z</DueDate>
+        <CompletedDate>2026-02-07T16:30:00Z</CompletedDate>
+        
+        <TargetAudience primary="B2B Decision Makers">
+            <Segment name="IT Directors" percentage="35.0">
+                <Demographics>Mid to large enterprise, 35-55 years old</Demographics>
+                <Interests>Business intelligence, data analytics, automation</Interests>
+                <PainPoints>Time-consuming manual reporting, lack of actionable insights</PainPoints>
+            </Segment>
+            <Segment name="Data Analysts" percentage="40.0">
+                <Demographics>Tech-savvy professionals, 25-45 years old</Demographics>
+                <Interests>Advanced analytics, AI/ML, data visualization</Interests>
+                <PainPoints>Complex tools, limited collaboration features</PainPoints>
+            </Segment>
+            <Segment name="Business Executives" percentage="25.0">
+                <Demographics>C-suite and VP level, 40-60 years old</Demographics>
+                <Interests>ROI, strategic insights, competitive advantage</Interests>
+                <PainPoints>Delayed decision-making, information overload</PainPoints>
+            </Segment>
+        </TargetAudience>
+        
+        <TargetPlatforms>
+            <Platform name="Company Blog" priority="1">
+                <Requirements>Long-form content, SEO optimized, engaging headline</Requirements>
+                <Constraints>
+                    <Constraint type="word-count" value="1200" unit="words">Target 1200-1500 words</Constraint>
+                    <Constraint type="reading-level" value="professional">Professional but accessible</Constraint>
+                    <Constraint type="tone" value="enthusiastic-professional">Balance enthusiasm with credibility</Constraint>
+                </Constraints>
+            </Platform>
+            <Platform name="LinkedIn" priority="2">
+                <Requirements>Condensed version with key highlights</Requirements>
+                <Constraints>
+                    <Constraint type="character-count" value="3000" unit="characters">LinkedIn limit</Constraint>
+                </Constraints>
+            </Platform>
+        </TargetPlatforms>
+        
+        <Goals>
+            <Goal type="awareness" priority="1">
+                <Description>Generate buzz and awareness about product launch</Description>
+                <Metric>Social shares and mentions</Metric>
+                <Target>500+ shares in first week</Target>
+            </Goal>
+            <Goal type="engagement" priority="2">
+                <Description>Drive traffic to product page</Description>
+                <Metric>Click-through rate</Metric>
+                <Target>5% CTR from blog post</Target>
+            </Goal>
+            <Goal type="conversion" priority="3">
+                <Description>Generate qualified leads</Description>
+                <Metric>Demo requests</Metric>
+                <Target>50 demo requests in launch week</Target>
+            </Goal>
+        </Goals>
+        
+        <Tags>
+            <Tag>product-launch</Tag>
+            <Tag>analytics</Tag>
+            <Tag>AI</Tag>
+            <Tag>Q1-2026-campaign</Tag>
+        </Tags>
+        
+        <Priority>1</Priority>
+        <Campaign>AI Analytics Platform Launch - Q1 2026</Campaign>
+    </Metadata>
+
+    <!-- Source Blocks -->
+    <SourceBlocks cbankId="CBANK001" totalBlocks="4">
+        
+        <!-- Block 1: Product Overview -->
+        <BlockReference blockId="CB001" include="true" weight="1.0" locked="false">
+            <BlockMetadata>
+                <Title>AI-Powered Analytics Platform Overview</Title>
+                <ContentType>text</ContentType>
+                <OriginalAuthor>Sarah Johnson</OriginalAuthor>
+                <LastModified>2026-02-06T14:30:00Z</LastModified>
+            </BlockMetadata>
+            <Selection type="full"/>
+            <Position>1</Position>
+            <Notes>Core content block - use as foundation for the post</Notes>
+        </BlockReference>
+        
+        <!-- Block 2: Dashboard Image -->
+        <BlockReference blockId="CB002" include="true" weight="0.8" locked="false">
+            <BlockMetadata>
+                <Title>Analytics Dashboard Screenshot</Title>
+                <ContentType>image</ContentType>
+            </BlockMetadata>
+            <Selection type="full"/>
+            <Position>2</Position>
+            <Notes>Visual break in the middle of the post</Notes>
+        </BlockReference>
+        
+        <!-- Block 3: Technical Stats (hypothetical) -->
+        <BlockReference blockId="CB003" include="true" weight="0.7" locked="false">
+            <BlockMetadata>
+                <Title>Product Performance Statistics</Title>
+                <ContentType>data</ContentType>
+            </BlockMetadata>
+            <Selection type="partial">
+                <Range start="1" end="5" unit="paragraph"/>
+                <Excerpt>Key statistics about processing speed and accuracy</Excerpt>
+            </Selection>
+            <Position>3</Position>
+            <Notes>Extract only the most impressive metrics for blog audience</Notes>
+        </BlockReference>
+        
+        <!-- Block 4: Customer Testimonial -->
+        <BlockReference blockId="CB004" include="true" weight="1.0" locked="true">
+            <BlockMetadata>
+                <Title>Customer Testimonial - TechCorp</Title>
+                <ContentType>text</ContentType>
+            </BlockMetadata>
+            <Selection type="full"/>
+            <Position>4</Position>
+            <Notes>Locked - approved by legal, do not modify</Notes>
+        </BlockReference>
+        
+    </SourceBlocks>
+
+    <!-- Modifications -->
+    <Modifications totalModifications="6">
+        
+        <!-- Modification 1: Tone adjustment -->
+        <Modification id="MOD001" 
+                      type="tone-change" 
+                      appliedDate="2026-02-06T10:30:00Z" 
+                      appliedBy="Sarah Johnson"
+                      status="applied">
+            <TargetBlock>CB001</TargetBlock>
+            <OriginalContent>Our AI-powered analytics platform revolutionizes how businesses understand their data.</OriginalContent>
+            <ModifiedContent>Imagine transforming your data chaos into crystal-clear insights in seconds. That's exactly what our new AI-powered analytics platform does for businesses like yours.</ModifiedContent>
+            <Reason>Make opening more engaging and relatable for blog audience</Reason>
+            <Parameters>
+                <Parameter name="tone" value="conversational" type="string"/>
+                <Parameter name="engagement-level" value="high" type="string"/>
+            </Parameters>
+            <Review>
+                <Reviewer>Mike Chen</Reviewer>
+                <ReviewDate>2026-02-06T11:00:00Z</ReviewDate>
+                <Status>approved</Status>
+                <Comments>Great improvement! More engaging while maintaining professionalism.</Comments>
+            </Review>
+        </Modification>
+        
+        <!-- Modification 2: Expand features section -->
+        <Modification id="MOD002" 
+                      type="expand" 
+                      appliedDate="2026-02-06T11:15:00Z" 
+                      appliedBy="Sarah Johnson"
+                      status="applied">
+            <TargetBlock>CB001</TargetBlock>
+            <OriginalContent>Real-time data processing</OriginalContent>
+            <ModifiedContent>**Lightning-Fast Processing**: Our platform processes millions of data points in real-time, giving you instant insights when you need them most. No more waiting hours for reports to generate.</ModifiedContent>
+            <Reason>Provide more context and benefits for each key feature</Reason>
+            <Parameters>
+                <Parameter name="expansion-style" value="benefit-focused" type="string"/>
+                <Parameter name="length-increase" value="3x" type="string"/>
+            </Parameters>
+        </Modification>
+        
+        <!-- Modification 3: Format stats for readability -->
+        <Modification id="MOD003" 
+                      type="format-change" 
+                      appliedDate="2026-02-06T12:00:00Z" 
+                      appliedBy="Sarah Johnson"
+                      status="applied">
+            <TargetBlock>CB003</TargetBlock>
+            <OriginalContent>{"processing_speed": "10M records/sec", "accuracy": "99.7%", "uptime": "99.99%"}</OriginalContent>
+            <ModifiedContent>The numbers speak for themselves:
+- Process 10 million records per second
+- Achieve 99.7% prediction accuracy
+- Enjoy 99.99% uptime reliability</ModifiedContent>
+            <Reason>Convert JSON data to readable blog format with emphasis on impact</Reason>
+            <Parameters>
+                <Parameter name="source-format" value="json" type="string"/>
+                <Parameter name="target-format" value="markdown-bullets" type="string"/>
+            </Parameters>
+        </Modification>
+        
+        <!-- Modification 4: Add transition sentence -->
+        <Modification id="MOD004" 
+                      type="edit" 
+                      appliedDate="2026-02-06T14:00:00Z" 
+                      appliedBy="Mike Chen"
+                      status="applied">
+            <TargetBlock>CB001</TargetBlock>
+            <ModifiedContent>But don't just take our word for it. Here's what our customers are saying:</ModifiedContent>
+            <Reason>Smooth transition between product description and testimonial</Reason>
+        </Modification>
+        
+        <!-- Modification 5: Localize for US audience -->
+        <Modification id="MOD005" 
+                      type="localize" 
+                      appliedDate="2026-02-06T15:00:00Z" 
+                      appliedBy="Sarah Johnson"
+                      status="applied">
+            <TargetBlock>CB001</TargetBlock>
+            <OriginalContent>Connect with 100+ data sources</OriginalContent>
+            <ModifiedContent>Seamlessly integrate with popular US business tools like Salesforce, HubSpot, QuickBooks, and 100+ other data sources</ModifiedContent>
+            <Reason>Make more relevant to US B2B audience with specific tool examples</Reason>
+            <Parameters>
+                <Parameter name="region" value="US" type="string"/>
+                <Parameter name="localization-type" value="examples" type="string"/>
+            </Parameters>
+        </Modification>
+        
+        <!-- Modification 6: Add CTA -->
+        <Modification id="MOD006" 
+                      type="enhance" 
+                      appliedDate="2026-02-07T16:00:00Z" 
+                      appliedBy="Sarah Johnson"
+                      status="applied">
+            <TargetBlock>CB001</TargetBlock>
+            <ModifiedContent>
+## Ready to Transform Your Analytics?
+
+Join industry leaders who are already leveraging AI to make smarter, faster decisions. Schedule a personalized demo today and see how our platform can revolutionize your data strategy.
+
+[Schedule Your Demo →]
+            </ModifiedContent>
+            <Reason>Add compelling call-to-action at end of post</Reason>
+            <Parameters>
+                <Parameter name="cta-type" value="demo-request" type="string"/>
+                <Parameter name="urgency-level" value="medium" type="string"/>
+            </Parameters>
+        </Modification>
+        
+    </Modifications>
+
+    <!-- Transformations -->
+    <Transformations totalTransformations="4">
+        
+        <!-- Transformation 1: Merge all blocks sequentially -->
+        <Transformation id="TRN001" 
+                        type="merge" 
+                        order="1" 
+                        status="completed"
+                        automated="true">
+            <Description>Combine all selected content blocks in specified order</Description>
+            <InputBlocks>
+                <BlockId>CB001</BlockId>
+                <BlockId>CB002</BlockId>
+                <BlockId>CB003</BlockId>
+                <BlockId>CB004</BlockId>
+            </InputBlocks>
+            <Parameters>
+                <Parameter name="merge-method" value="sequential" type="string"/>
+                <Parameter name="separator" value="section-break" type="string"/>
+                <Parameter name="preserve-formatting" value="true" type="boolean"/>
+            </Parameters>
+            <Output>Combined content with proper spacing and transitions</Output>
+            <Validation passed="true">
+                <ValidationRule type="structure">
+                    <Rule>All blocks present in correct order</Rule>
+                    <Result>true</Result>
+                    <Message>Merge successful - 4 blocks combined</Message>
+                </ValidationRule>
+            </Validation>
+        </Transformation>
+        
+        <!-- Transformation 2: Add blog-specific formatting -->
+        <Transformation id="TRN002" 
+                        type="reformat" 
+                        order="2" 
+                        status="completed"
+                        automated="true">
+            <Description>Apply blog post formatting standards</Description>
+            <InputBlocks>
+                <BlockId>MERGED_OUTPUT_TRN001</BlockId>
+            </InputBlocks>
+            <Parameters>
+                <Parameter name="format-type" value="blog-html" type="string"/>
+                <Parameter name="include-toc" value="true" type="boolean"/>
+                <Parameter name="add-meta-tags" value="true" type="boolean"/>
+                <Parameter name="optimize-images" value="true" type="boolean"/>
+            </Parameters>
+            <Validation passed="true">
+                <ValidationRule type="format">
+                    <Rule>Valid HTML5 structure</Rule>
+                    <Result>true</Result>
+                </ValidationRule>
+                <ValidationRule type="seo">
+                    <Rule>Meta tags present</Rule>
+                    <Result>true</Result>
+                </ValidationRule>
+            </Validation>
+        </Transformation>
+        
+        <!-- Transformation 3: SEO optimization -->
+        <Transformation id="TRN003" 
+                        type="enhance" 
+                        order="3" 
+                        status="completed"
+                        automated="true">
+            <Description>Apply SEO best practices</Description>
+            <Parameters>
+                <Parameter name="keyword-density-target" value="2.5" type="decimal"/>
+                <Parameter name="add-internal-links" value="true" type="boolean"/>
+                <Parameter name="optimize-headings" value="true" type="boolean"/>
+            </Parameters>
+            <Validation passed="true">
+                <ValidationRule type="seo">
+                    <Rule>Keyword density within target range</Rule>
+                    <Result>true</Result>
+                    <Message>2.3% density for primary keyword</Message>
+                </ValidationRule>
+                <ValidationRule type="seo">
+                    <Rule>H1 tag present and optimized</Rule>
+                    <Result>true</Result>
+                </ValidationRule>
+            </Validation>
+        </Transformation>
+        
+        <!-- Transformation 4: Extract summary for LinkedIn -->
+        <Transformation id="TRN004" 
+                        type="summarize" 
+                        order="4" 
+                        status="completed"
+                        automated="true">
+            <Description>Create condensed version for LinkedIn post</Description>
+            <Parameters>
+                <Parameter name="max-length" value="3000" type="integer"/>
+                <Parameter name="include-key-points" value="true" type="boolean"/>
+                <Parameter name="preserve-cta" value="true" type="boolean"/>
+            </Parameters>
+            <Output>LinkedIn-optimized summary with character count: 2,847</Output>
+        </Transformation>
+        
+    </Transformations>
+
+    <!-- Output -->
+    <Output status="ready">
+        
+        <!-- Preview -->
+        <Preview type="final">
+            <Content><![CDATA[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform Your Data Into Insights with AI-Powered Analytics</title>
+    <meta name="description" content="Discover how our new AI-powered analytics platform revolutionizes business intelligence with real-time insights, predictive analytics, and intuitive visualizations.">
+    <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics">
+</head>
+<body>
+    <article>
+        <h1>Transform Your Data Into Insights with AI-Powered Analytics</h1>
+        
+        <p>Imagine transforming your data chaos into crystal-clear insights in seconds. That's exactly what our new AI-powered analytics platform does for businesses like yours.</p>
+        
+        [Full blog post content continues...]
+        
+        <h2>Ready to Transform Your Analytics?</h2>
+        <p>Join industry leaders who are already leveraging AI to make smarter, faster decisions...</p>
+        
+    </article>
+</body>
+</html>
+            ]]></Content>
+            <Format>html</Format>
+            <GeneratedDate>2026-02-07T16:15:00Z</GeneratedDate>
+            <GeneratedBy>CBlend System</GeneratedBy>
+            <Version>1.0</Version>
+        </Preview>
+        
+        <!-- Final Content -->
+        <FinalContent format="html" 
+                      encoding="UTF-8" 
+                      size="15420"
+                      checksum="xyz789abc123"
+                      url="https://storage.example.com/blends/BL001/final.html">
+            [Complete HTML content would be here]
+        </FinalContent>
+        
+        <!-- Output Metadata -->
+        <Metadata>
+            <Title>Transform Your Data Into Insights with AI-Powered Analytics</Title>
+            <WordCount>1347</WordCount>
+            <CharacterCount>8542</CharacterCount>
+            <ReadingTime>5</ReadingTime>
+            <Language>en</Language>
+            <Tone>Professional, enthusiastic, accessible</Tone>
+            <ReadingLevel>Professional (Grade 12-14)</ReadingLevel>
+            <Keywords>AI analytics, business intelligence, data visualization, machine learning, real-time processing</Keywords>
+        </Metadata>
+        
+        <!-- Analytics -->
+        <Analytics>
+            <Quality overallScore="8.7">
+                <Metric name="readability" category="content">
+                    <Score>8.5</Score>
+                    <MaxScore>10.0</MaxScore>
+                    <Details>Flesch Reading Ease: 65.2 (Standard/Average)</Details>
+                </Metric>
+                <Metric name="engagement" category="content">
+                    <Score>9.0</Score>
+                    <MaxScore>10.0</MaxScore>
+                    <Details>Strong hooks, clear CTA, compelling testimonials</Details>
+                </Metric>
+                <Metric name="coherence" category="structure">
+                    <Score>8.5</Score>
+                    <MaxScore>10.0</MaxScore>
+                    <Details>Logical flow with smooth transitions</Details>
+                </Metric>
+            </Quality>
+            
+            <Compliance compliant="true">
+                <Check type="brand-guidelines" severity="error">
+                    <Result>true</Result>
+                    <Message>All brand guidelines followed</Message>
+                </Check>
+                <Check type="legal-disclaimers" severity="error">
+                    <Result>true</Result>
+                    <Message>Required disclaimers present</Message>
+                </Check>
+                <Check type="accessibility" severity="warning">
+                    <Result>true</Result>
+                    <Message>WCAG 2.1 AA compliant</Message>
+                    <Details>All images have alt text, proper heading hierarchy</Details>
+                </Check>
+            </Compliance>
+            
+            <SEO>
+                <Score>8.8</Score>
+                <KeywordDensity>2.3</KeywordDensity>
+                <Readability>65.2</Readability>
+                <Suggestions>
+                    <Suggestion>Consider adding 1-2 more internal links to related content</Suggestion>
+                    <Suggestion>Meta description could be shortened by 10 characters for optimal display</Suggestion>
+                </Suggestions>
+            </SEO>
+        </Analytics>
+        
+    </Output>
+
+    <!-- Workflow -->
+    <Workflow>
+        
+        <!-- Recipe -->
+        <Recipe reusable="true" templateId="BLOG-POST-STANDARD">
+            <Step stepNumber="1" automated="false" optional="false" status="completed">
+                <Title>Content Selection</Title>
+                <Instruction>Select relevant content blocks from CBank based on blog post requirements</Instruction>
+                <ExpectedOutput>3-5 content blocks selected with appropriate mix of text, visuals, and data</ExpectedOutput>
+                <CompletionCriteria>All blocks reviewed and approved by content lead</CompletionCriteria>
+            </Step>
+            
+            <Step stepNumber="2" automated="false" optional="false" status="completed">
+                <Title>Content Modification</Title>
+                <Instruction>Adapt selected blocks for blog format: adjust tone, add transitions, enhance engagement</Instruction>
+                <ExpectedOutput>Modified content that flows naturally and maintains brand voice</ExpectedOutput>
+                <Dependencies>
+                    <StepId>1</StepId>
+                </Dependencies>
+            </Step>
+            
+            <Step stepNumber="3" automated="true" optional="false" status="completed">
+                <Title>Content Merging</Title>
+                <Instruction>Combine all blocks in specified order with appropriate spacing</Instruction>
+                <ExpectedOutput>Single cohesive document</ExpectedOutput>
+                <Dependencies>
+                    <StepId>2</StepId>
+                </Dependencies>
+            </Step>
+            
+            <Step stepNumber="4" automated="true" optional="false" status="completed">
+                <Title>Format Application</Title>
+                <Instruction>Apply blog post HTML formatting and structure</Instruction>
+                <ExpectedOutput>Properly formatted HTML blog post</ExpectedOutput>
+                <Dependencies>
+                    <StepId>3</StepId>
+                </Dependencies>
+            </Step>
+            
+            <Step stepNumber="5" automated="true" optional="false" status="completed">
+                <Title>SEO Optimization</Title>
+                <Instruction>Optimize for search engines: meta tags, keyword density, internal linking</Instruction>
+                <ExpectedOutput>SEO-optimized blog post with score above 8.0</ExpectedOutput>
+                <Dependencies>
+                    <StepId>4</StepId>
+                </Dependencies>
+            </Step>
+            
+            <Step stepNumber="6" automated="false" optional="false" status="completed">
+                <Title>Quality Review</Title>
+                <Instruction>Review final output for quality, compliance, and brand alignment</Instruction>
+                <ExpectedOutput>Approved content ready for publication</ExpectedOutput>
+                <Dependencies>
+                    <StepId>5</StepId>
+                </Dependencies>
+            </Step>
+            
+            <Step stepNumber="7" automated="true" optional="true" status="completed">
+                <Title>Generate Social Variants</Title>
+                <Instruction>Create condensed versions for LinkedIn and Twitter</Instruction>
+                <ExpectedOutput>Platform-specific content variants</ExpectedOutput>
+                <Dependencies>
+                    <StepId>6</StepId>
+                </Dependencies>
+            </Step>
+        </Recipe>
+        
+        <!-- History -->
+        <History>
+            <Event timestamp="2026-02-06T08:00:00Z" user="Sarah Johnson" type="created">
+                <Description>Blend created</Description>
+                <Details>Initial setup with 4 source blocks</Details>
+            </Event>
+            <Event timestamp="2026-02-06T10:30:00Z" user="Sarah Johnson" type="modified">
+                <Description>Applied tone modifications</Description>
+                <Changes>Modified CB001 opening for better engagement</Changes>
+            </Event>
+            <Event timestamp="2026-02-06T15:30:00Z" user="Mike Chen" type="comment">
+                <Description>Review comments added</Description>
+                <Details>Suggested adding more specific tool examples</Details>
+            </Event>
+            <Event timestamp="2026-02-07T16:30:00Z" user="Sarah Johnson" type="approved">
+                <Description>Final version approved</Description>
+                <Details>All modifications applied, quality score 8.7</Details>
+            </Event>
+        </History>
+        
+        <!-- Approvals -->
+        <Approvals allApproved="true">
+            <Approval required="true" order="1">
+                <Approver>Mike Chen</Approver>
+                <Role>Content Editor</Role>
+                <ApprovalDate>2026-02-07T14:00:00Z</ApprovalDate>
+                <Status>approved</Status>
+                <Comments>Excellent work! Content flows well and hits all the key points.</Comments>
+            </Approval>
+            <Approval required="true" order="2">
+                <Approver>Lisa Park</Approver>
+                <Role>Marketing Director</Role>
+                <ApprovalDate>2026-02-07T16:00:00Z</ApprovalDate>
+                <Status>approved</Status>
+                <Comments>Ready for publication. Great job team!</Comments>
+            </Approval>
+            <Approval required="false" order="3">
+                <Approver>Legal Team</Approver>
+                <Role>Legal Review</Role>
+                <ApprovalDate>2026-02-07T15:30:00Z</ApprovalDate>
+                <Status>approved</Status>
+                <Comments>Customer testimonial approved, no legal concerns.</Comments>
+            </Approval>
+        </Approvals>
+        
+    </Workflow>
+
+    <!-- Validation -->
+    <Validation allPassed="true">
+        <Rule id="VR001" type="length" severity="warning" enabled="true">
+            <Description>Blog post should be between 1200-1500 words</Description>
+            <Condition>wordCount >= 1200 AND wordCount <= 1500</Condition>
+            <ValidationResult>
+                <Passed>true</Passed>
+                <Message>Word count: 1347 (within target range)</Message>
+                <ValidatedDate>2026-02-07T16:20:00Z</ValidatedDate>
+            </ValidationResult>
+        </Rule>
+        
+        <Rule id="VR002" type="seo" severity="error" enabled="true">
+            <Description>SEO score must be above 8.0</Description>
+            <Condition>seoScore >= 8.0</Condition>
+            <ValidationResult>
+                <Passed>true</Passed>
+                <Message>SEO score: 8.8</Message>
+                <ValidatedDate>2026-02-07T16:20:00Z</ValidatedDate>
+            </ValidationResult>
+        </Rule>
+        
+        <Rule id="VR003" type="compliance" severity="error" enabled="true">
+            <Description>Must pass all brand compliance checks</Description>
+            <Condition>brandCompliance == true</Condition>
+            <ValidationResult>
+                <Passed>true</Passed>
+                <Message>All brand guidelines followed</Message>
+                <ValidatedDate>2026-02-07T16:20:00Z</ValidatedDate>
+            </ValidationResult>
+        </Rule>
+        
+        <Rule id="VR004" type="quality" severity="warning" enabled="true">
+            <Description>Overall quality score should be above 8.0</Description>
+            <Condition>qualityScore >= 8.0</Condition>
+            <ValidationResult>
+                <Passed>true</Passed>
+                <Message>Quality score: 8.7</Message>
+                <ValidatedDate>2026-02-07T16:20:00Z</ValidatedDate>
+            </ValidationResult>
+        </Rule>
+    </Validation>
+
+</CBlend>
