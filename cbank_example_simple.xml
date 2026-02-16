@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CBank xmlns="http://contentrepurpose.com/cbank"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://contentrepurpose.com/cbank cbank_schema_simple.xsd"
+       id="CBANK001"
+       name="My Content Library">
+
+    <!-- CONTENT BLOCK 1: A text block -->
+    <ContentBlock id="CB001" type="text">
+        <Title>Welcome Message</Title>
+        <Author>John Smith</Author>
+        <CreatedDate>2026-02-15</CreatedDate>
+        <Tags>
+            <Tag>introduction</Tag>
+            <Tag>welcome</Tag>
+        </Tags>
+        <Content>
+            <Text>Welcome to our platform! We're excited to have you here. 
+            This guide will help you get started with all the amazing features 
+            we offer. Let's dive in!</Text>
+        </Content>
+    </ContentBlock>
+
+    <!-- CONTENT BLOCK 2: An image block -->
+    <ContentBlock id="CB002" type="image">
+        <Title>Product Dashboard</Title>
+        <Author>Design Team</Author>
+        <CreatedDate>2026-02-14</CreatedDate>
+        <Tags>
+            <Tag>screenshot</Tag>
+            <Tag>dashboard</Tag>
+        </Tags>
+        <Content>
+            <Image>
+                <URL>https://example.com/images/dashboard.png</URL>
+                <AltText>Dashboard showing analytics and metrics</AltText>
+            </Image>
+        </Content>
+    </ContentBlock>
+
+    <!-- CONTENT BLOCK 3: A data block -->
+    <ContentBlock id="CB003" type="data">
+        <Title>Key Statistics</Title>
+        <Author>Analytics Team</Author>
+        <CreatedDate>2026-02-13</CreatedDate>
+        <Tags>
+            <Tag>statistics</Tag>
+            <Tag>metrics</Tag>
+        </Tags>
+        <Content>
+            <Data>
+                {
+                    "users": "10,000+",
+                    "satisfaction": "98%",
+                    "countries": "50+"
+                }
+            </Data>
+        </Content>
+    </ContentBlock>
+
+    <!-- CONTENT BLOCK 4: Another text block -->
+    <ContentBlock id="CB004" type="text">
+        <Title>Customer Testimonial</Title>
+        <Author>Customer Success Team</Author>
+        <CreatedDate>2026-02-12</CreatedDate>
+        <Tags>
+            <Tag>testimonial</Tag>
+            <Tag>customer</Tag>
+        </Tags>
+        <Content>
+            <Text>"This platform has transformed how we work. Highly recommended!"
+            - Sarah Johnson, CEO of TechCorp</Text>
+        </Content>
+    </ContentBlock>
+
+</CBank>
