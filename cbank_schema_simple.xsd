@@ -4,7 +4,6 @@
            xmlns:cb="http://contentrepurpose.com/cbank"
            elementFormDefault="qualified">
 
-
     <xs:element name="CBank">
         <xs:complexType>
             <xs:sequence>
