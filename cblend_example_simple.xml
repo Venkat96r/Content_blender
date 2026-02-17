@@ -5,35 +5,29 @@
         id="BL001"
         status="completed">
 
-    <!-- Basic information about this blend -->
     <Name>Welcome Blog Post</Name>
     <Purpose>Create a blog post introducing our platform to new users</Purpose>
     <CreatedBy>Marketing Team</CreatedBy>
     <CreatedDate>2026-02-15</CreatedDate>
     <TargetPlatform>blog</TargetPlatform>
 
-    <!-- Content blocks we're using in this blend -->
     <SelectedBlocks>
         
-        <!-- First block: Welcome message -->
         <BlockReference blockId="CB001">
             <Position>1</Position>
             <Notes>Use as introduction</Notes>
         </BlockReference>
         
-        <!-- Second block: Dashboard image -->
         <BlockReference blockId="CB002">
             <Position>2</Position>
             <Notes>Visual break in the middle</Notes>
         </BlockReference>
         
-        <!-- Third block: Statistics -->
         <BlockReference blockId="CB003">
             <Position>3</Position>
             <Notes>Show impressive numbers</Notes>
         </BlockReference>
         
-        <!-- Fourth block: Testimonial -->
         <BlockReference blockId="CB004">
             <Position>4</Position>
             <Notes>End with social proof</Notes>
@@ -41,17 +35,14 @@
         
     </SelectedBlocks>
 
-    <!-- Changes we made to the content -->
     <Modifications>
         
-        <!-- Made the tone more professional -->
         <Modification id="MOD001">
             <Type>tone-change</Type>
             <Description>Changed tone to be more professional for blog audience</Description>
             <AppliedDate>2026-02-15</AppliedDate>
         </Modification>
         
-        <!-- Expanded the content -->
         <Modification id="MOD002">
             <Type>expand</Type>
             <Description>Added more details to welcome message</Description>
