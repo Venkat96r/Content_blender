@@ -4,8 +4,7 @@
        xsi:schemaLocation="http://contentrepurpose.com/cbank cbank_schema_simple.xsd"
        id="CBANK001"
        name="My Content Library">
-
-    <!-- CONTENT BLOCK 1: A text block -->
+ 
     <ContentBlock id="CB001" type="text">
         <Title>Welcome Message</Title>
         <Author>John Smith</Author>
@@ -21,7 +20,6 @@
         </Content>
     </ContentBlock>
 
-    <!-- CONTENT BLOCK 2: An image block -->
     <ContentBlock id="CB002" type="image">
         <Title>Product Dashboard</Title>
         <Author>Design Team</Author>
@@ -38,7 +36,6 @@
         </Content>
     </ContentBlock>
 
-    <!-- CONTENT BLOCK 3: A data block -->
     <ContentBlock id="CB003" type="data">
         <Title>Key Statistics</Title>
         <Author>Analytics Team</Author>
@@ -58,7 +55,6 @@
         </Content>
     </ContentBlock>
 
-    <!-- CONTENT BLOCK 4: Another text block -->
     <ContentBlock id="CB004" type="text">
         <Title>Customer Testimonial</Title>
         <Author>Customer Success Team</Author>
