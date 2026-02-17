@@ -4,50 +4,31 @@
            xmlns:cb="http://contentrepurpose.com/cbank"
            elementFormDefault="qualified">
 
-    <!-- 
-    ============================================================
-    SIMPLIFIED CBANK SCHEMA - BEGINNER FRIENDLY
-    ============================================================
-    This schema defines a simple content repository (CBank)
-    where you can store reusable content blocks.
-    ============================================================
-    -->
 
-    <!-- ROOT ELEMENT: The main CBank container -->
     <xs:element name="CBank">
         <xs:complexType>
             <xs:sequence>
-                <!-- List of all content blocks -->
                 <xs:element name="ContentBlock" type="cb:ContentBlockType" 
                             minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
-            <!-- Basic attributes -->
             <xs:attribute name="id" type="xs:ID" use="required"/>
             <xs:attribute name="name" type="xs:string" use="required"/>
         </xs:complexType>
     </xs:element>
 
-    <!-- CONTENT BLOCK: A single piece of reusable content -->
     <xs:complexType name="ContentBlockType">
         <xs:sequence>
-            <!-- Basic info about the content -->
             <xs:element name="Title" type="xs:string"/>
             <xs:element name="Author" type="xs:string"/>
             <xs:element name="CreatedDate" type="xs:date"/>
-            
-            <!-- Tags for searching/filtering -->
             <xs:element name="Tags" type="cb:TagsType" minOccurs="0"/>
-            
-            <!-- The actual content (choose one type) -->
             <xs:element name="Content" type="cb:ContentType"/>
         </xs:sequence>
         
-        <!-- Content block attributes -->
         <xs:attribute name="id" type="xs:ID" use="required"/>
         <xs:attribute name="type" type="cb:ContentTypeEnum" use="required"/>
     </xs:complexType>
 
-    <!-- TAGS: Simple list of keywords -->
     <xs:complexType name="TagsType">
         <xs:sequence>
             <xs:element name="Tag" type="xs:string" 
@@ -55,13 +36,10 @@
         </xs:sequence>
     </xs:complexType>
 
-    <!-- CONTENT: The actual content (text, image, or data) -->
     <xs:complexType name="ContentType">
         <xs:choice>
-            <!-- Text content -->
             <xs:element name="Text" type="xs:string"/>
             
-            <!-- Image content -->
             <xs:element name="Image">
                 <xs:complexType>
                     <xs:sequence>
@@ -70,13 +48,11 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            
-            <!-- Data/JSON content -->
+
             <xs:element name="Data" type="xs:string"/>
         </xs:choice>
     </xs:complexType>
 
-    <!-- CONTENT TYPE: What kind of content is this? -->
     <xs:simpleType name="ContentTypeEnum">
         <xs:restriction base="xs:string">
             <xs:enumeration value="text"/>
