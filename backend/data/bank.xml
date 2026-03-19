@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CBank>
+  <ContentItem ID="TXT-001" MediaType="text/plain">
+    <Title>Welcome to Content Blender Studio</Title>
+    <Body>This is a sample text item. Use the canvas editor to compose and style your blends for Web and PDF export.</Body>
+    <Meta author="System" language="en" created="2026-03-19" />
+  </ContentItem>
+  <ContentItem ID="TXT-002" MediaType="text/plain">
+    <Title>Getting Started Guide</Title>
+    <Body>Add images, videos, and text to your Content Bank, then blend them into beautiful layouts. Export as HTML or structured XML.</Body>
+    <Meta author="System" language="en" created="2026-03-19" />
+  </ContentItem>
+  <ContentItem ID="TXT-003" MediaType="text/plain">
+    <Title>dune</Title>
+    <Body>frank herbert's masterpiece</Body>
+    <Meta author="Anonymous" language="en" created="2026-03-19" />
+  </ContentItem>
+  <ContentItem ID="IMG-001" MediaType="image/jpeg">
+    <Title>WhatsApp Image 2026-01-29 at 17.34.46</Title>
+    <Asset src="/api/uploads/IMG-001.jpeg" alt="WhatsApp Image 2026-01-29 at 17.34.46" />
+    <Caption>the model</Caption>
+    <Meta author="Anonymous" language="en" created="2026-03-19" />
+  </ContentItem>
+  <ContentItem ID="IMG-002" MediaType="image/jpeg">
+    <Title>paul</Title>
+    <Asset src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg" alt="dunebook" />
+    <Meta author="Anonymous" language="en" created="2026-03-19" />
+  </ContentItem>
+  <ContentItem ID="IMG-003" MediaType="image/jpeg">
+    <Title>arnav</Title>
+    <Asset src="https://www.google.com/imgres?q=tennis&amp;imgurl=https%3A%2F%2Fimg.olympics.com%2Fimages%2Fimage%2Fprivate%2Ft_s_pog_staticContent_hero_md%2Ff_auto%2Fprimary%2Fufqgtgmmdvwrcqavdrhw&amp;imgrefurl=https%3A%2F%2Fwww.olympics.com%2Fen%2Fnews%2Ftennis-rules-regulations-how-to-play-basics&amp;docid=nbUIgbbfi_-pFM&amp;tbnid=CHQfdJJDTHTINM&amp;vet=12ahUKEwi5orGZkqyTAxWyd2wGHasrIiMQnPAOegQIIxAB..i&amp;w=730&amp;h=410&amp;hcb=2&amp;ved=2ahUKEwi5orGZkqyTAxWyd2wGHasrIiMQnPAOegQIIxAB" alt="arnav" />
+    <Meta author="Anonymous" language="en" created="2026-03-19" />
+  </ContentItem>
+</CBank>

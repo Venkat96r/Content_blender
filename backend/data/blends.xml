@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Blends>
+  <CBlend BlendID="BLEND-0001" Title="dune" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:23:43.100986">
+    <Placement Order="1" RefID="TXT-003" Layout="hero" />
+    <Placement Order="2" RefID="TXT-002" Layout="body" />
+    <Placement Order="3" RefID="TXT-001" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0002" Title="dune2" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:25:04.219567">
+    <Placement Order="1" RefID="TXT-003" Layout="body" />
+    <Placement Order="2" RefID="TXT-001" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0003" Title="ai" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:27:07.690665">
+    <Placement Order="1" RefID="IMG-001" Layout="body" />
+    <Placement Order="2" RefID="TXT-003" Layout="body">
+      <Style hidden="true" />
+    </Placement>
+    <Placement Order="3" RefID="TXT-002" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0004" Title="dune detail" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:30:53.526357">
+    <Placement Order="1" RefID="IMG-002" Layout="media-embed">
+      <Style padding="52px" margin="0 0 0px 0" borderRadius="0px" objectFit="contain" hidden="false" />
+    </Placement>
+    <Placement Order="2" RefID="TXT-003" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0005" Title="ganud" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T19:43:20.368382">
+    <Placement Order="1" RefID="IMG-002" Layout="body">
+      <Style borderRadius="9px" objectFit="fill" />
+    </Placement>
+    <Placement Order="2" RefID="TXT-003" Layout="body" />
+  </CBlend>
+</Blends>
