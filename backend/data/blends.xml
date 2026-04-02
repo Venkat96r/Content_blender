@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Blends>
   <CBlend BlendID="BLEND-0001" Title="dune" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:23:43.100986">
-    <Placement Order="1" RefID="TXT-003" Layout="hero" />
-    <Placement Order="2" RefID="TXT-002" Layout="body" />
-    <Placement Order="3" RefID="TXT-001" Layout="body" />
+    <Placement Order="1" RefID="TXT-002" Layout="body">
+      <Style borderRadius="6px" />
+    </Placement>
+    <Placement Order="2" RefID="TXT-001" Layout="body" />
   </CBlend>
   <CBlend BlendID="BLEND-0002" Title="dune2" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:25:04.219567">
     <Placement Order="1" RefID="TXT-003" Layout="body" />
