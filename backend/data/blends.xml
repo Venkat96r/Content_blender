@@ -6,7 +6,7 @@
     </Placement>
     <Placement Order="2" RefID="TXT-001" Layout="body" />
   </CBlend>
-  <CBlend BlendID="BLEND-0002" Title="dune2" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:25:04.219567">
+  <CBlend BlendID="BLEND-0002" Title="dune2" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:25:04.219567">
     <Placement Order="1" RefID="TXT-003" Layout="body" />
     <Placement Order="2" RefID="TXT-001" Layout="body" />
   </CBlend>
@@ -28,5 +28,20 @@
       <Style borderRadius="9px" objectFit="fill" />
     </Placement>
     <Placement Order="2" RefID="TXT-003" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0006" Title="temp" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-04-02T11:53:24.990664">
+    <Placement Order="1" RefID="TXT-001" Layout="card" />
+    <Placement Order="2" RefID="TXT-003" Layout="card" />
+    <Placement Order="3" RefID="IMG-003" Layout="card" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0007" Title="hello" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-04-02T12:14:54.125930">
+    <Placement Order="1" RefID="TXT-001" Layout="card" />
+    <Placement Order="2" RefID="TXT-003" Layout="card" />
+    <Placement Order="3" RefID="TXT-002" Layout="card" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0008" Title="new" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-04-02T12:42:53.480929">
+    <Placement Order="1" RefID="TXT-003" Layout="card" />
+    <Placement Order="2" RefID="IMG-003" Layout="card" />
+    <Placement Order="3" RefID="TXT-001" Layout="card" />
   </CBlend>
 </Blends>
