@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Blends>
+  <CBlend BlendID="BLEND-0001" Title="dune" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:23:43.100986">
+    <Placement Order="1" RefID="TXT-002" Layout="body">
+      <Style borderRadius="6px" />
+    </Placement>
+    <Placement Order="2" RefID="TXT-001" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0002" Title="dune2" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:25:04.219567">
+    <Placement Order="1" RefID="TXT-003" Layout="body" />
+    <Placement Order="2" RefID="TXT-001" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0003" Title="ai" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:27:07.690665">
+    <Placement Order="1" RefID="IMG-001" Layout="body" />
+    <Placement Order="2" RefID="TXT-003" Layout="body">
+      <Style hidden="true" />
+    </Placement>
+    <Placement Order="3" RefID="TXT-002" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0004" Title="dune detail" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-03-19T16:30:53.526357">
+    <Placement Order="1" RefID="IMG-002" Layout="media-embed">
+      <Style padding="52px" margin="0 0 0px 0" borderRadius="0px" objectFit="contain" hidden="false" />
+    </Placement>
+    <Placement Order="2" RefID="TXT-003" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0005" Title="ganud" Target="PDF" BankRef="../data/bank.xml" CreatedAt="2026-03-19T19:43:20.368382">
+    <Placement Order="1" RefID="IMG-002" Layout="body">
+      <Style borderRadius="9px" objectFit="fill" />
+    </Placement>
+    <Placement Order="2" RefID="TXT-003" Layout="body" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0006" Title="temp" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-04-02T11:53:24.990664">
+    <Placement Order="1" RefID="TXT-001" Layout="card" />
+    <Placement Order="2" RefID="TXT-003" Layout="card" />
+    <Placement Order="3" RefID="IMG-003" Layout="card" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0007" Title="hello" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-04-02T12:14:54.125930">
+    <Placement Order="1" RefID="TXT-001" Layout="card" />
+    <Placement Order="2" RefID="TXT-003" Layout="card" />
+    <Placement Order="3" RefID="TXT-002" Layout="card" />
+  </CBlend>
+  <CBlend BlendID="BLEND-0008" Title="new" Target="Web" BankRef="../data/bank.xml" CreatedAt="2026-04-02T12:42:53.480929">
+    <Placement Order="1" RefID="TXT-003" Layout="card" />
+    <Placement Order="2" RefID="IMG-003" Layout="card" />
+    <Placement Order="3" RefID="TXT-001" Layout="card" />
+  </CBlend>
+</Blends>

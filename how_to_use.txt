@@ -1,0 +1,281 @@
+================================================================================
+CONTENT BLENDER STUDIO v3.0 - HOW TO USE
+================================================================================
+
+QUICK START
+===========
+
+1. Start the Application
+   $ python start.py
+
+   This will:
+   - Start the backend FastAPI server on http://localhost:8000
+   - Start the frontend dev server on http://localhost:3000
+   - Open your browser automatically to http://localhost:3000
+
+2. You'll see two main sections:
+   - CBank (Content Bank): Where you store all your content
+   - CBlend (Canvas): Where you compose and design blends
+
+================================================================================
+SECTION 1: CBANK (CONTENT BANK)
+================================================================================
+
+What is CBank?
+--------------
+CBank is your content library - think of it like a pantry of ingredients.
+All your text, images, and videos live here, indexed and ready to use.
+
+How to Add Content
+------------------
+
+1. ADDING TEXT
+   - Click the "Add" button
+   - Select "Text" tab
+   - Enter Title (required)
+   - Enter Body content (required)
+   - Optional: Add Author name
+   - Click "Save to Bank"
+
+2. ADDING IMAGES (by URL)
+   - Click the "Add" button
+   - Select "Image URL" tab
+   - Enter Image URL (must be a direct link to an image)
+   - Add Alt text for accessibility
+   - Optional: Add Caption and Author
+   - Click "Save to Bank"
+
+3. ADDING VIDEOS (by URL)
+   - Click the "Add" button
+   - Select "Video URL" tab
+   - Paste YouTube link or direct video URL
+   - Optional: Add Caption and Author
+   - The system automatically:
+     * Converts YouTube links to embed format
+     * Generates QR code for scanning
+     * Creates thumbnail preview
+   - Click "Save to Bank"
+
+4. UPLOADING FILES
+   - Click the "Add" button
+   - Select "Upload" tab
+   - Drag and drop OR click to select image/video file
+   - Add Title (required)
+   - Optional: Add Caption and Author
+   - Your files are stored in backend/data/uploads/
+   - Click "Upload"
+
+Organizing Your Items
+---------------------
+- Each item gets an auto-generated ID (TXT-001, IMG-002, VID-003, etc.)
+- Items display with type icon and badge
+- Search by clicking on items in the list
+- Delete items with the trash icon
+
+================================================================================
+SECTION 2: CBLEND (CANVAS EDITOR)
+================================================================================
+
+What is CBlend?
+---------------
+CBlend is your design canvas. You compose layouts by arranging items from
+CBank into structured "Blends". Think of it like a recipe using your pantry items.
+
+Creating a Blend
+----------------
+
+1. Click the CBlend tab
+2. Click "New Blend" button
+3. Enter your Blend Title (e.g., "Welcome Page", "Product Guide")
+4. Select Target (Web or PDF) - determines export format
+5. Click "Create"
+
+Adding Items to Your Blend
+--------------------------
+
+1. From the CBank items list, select items you want to use
+2. Drag items into the canvas area
+3. OR click "Add Selected Items" button
+
+Arranging Items
+---------------
+
+1. Each item appears as a draggable card in the canvas
+2. Change the order by dragging items up/down
+3. Select Layout position (body, sidebar, header, footer)
+4. Each item shows its ID, title, and type
+
+Styling Items
+-------------
+
+Click the "Style" button next to any item to customize:
+
+LAYOUT PROPERTIES:
+- Width: Set pixel width (e.g., "100%", "500px")
+- Padding: Space inside (e.g., "10px", "20px 10px")
+- Margin: Space outside (e.g., "10px")
+- Border Radius: Rounded corners (e.g., "8px")
+
+COLOR & TEXT:
+- Background: Background color (e.g., "#f0f0f0", "white")
+- Color: Text color
+- Font Size: Text size (e.g., "16px", "1.2em")
+- Font Weight: Bold level (normal, bold, 700, etc.)
+- Line Height: Space between lines (e.g., "1.5", "24px")
+
+MEDIA:
+- Object Fit: How images fit (cover, contain, fill, etc.)
+- Aspect Ratio: Image proportion (e.g., "16/9", "4/3")
+- Hidden: Hide item (yes/no)
+
+Exporting Your Blend
+--------------------
+
+1. Click the export button next to your blend
+2. Choose format:
+   - HTML: Web-ready page with all styling
+   - XML: Structured data for further processing
+3. Download the file
+
+Deleting a Blend
+----------------
+- Click trash icon next to blend title
+- Confirm deletion
+
+================================================================================
+WORKFLOW EXAMPLE
+================================================================================
+
+Scenario: Create a "Product Overview" blend
+
+STEP 1: Build Your Content Bank
+- Add text: "Product Features"
+- Add text: "Customer Testimonials"
+- Add image: Product photo
+- Add video: Demo video
+- Add text: "Call to Action"
+
+STEP 2: Create CBlend
+- Click CBlend tab
+- Create new blend "Product Overview"
+- Set target to "Web"
+
+STEP 3: Compose the Layout
+- Add "Product Features" text
+- Add product photo image
+- Add "Customer Testimonials" text
+- Add demo video
+- Add "Call to Action" text
+- Arrange in this order (top to bottom)
+
+STEP 4: Style the Elements
+- Style the title: larger font, bold, centered
+- Style the image: 80% width, rounded corners
+- Style the testimonial: italic, lighter color
+- Style the video: responsive container
+
+STEP 5: Export
+- Click Export
+- Download as HTML to preview
+- Or download as XML for integration
+
+================================================================================
+TIPS & TRICKS
+================================================================================
+
+1. REUSABILITY
+   - Items in CBank can be used in multiple blends
+   - Update an item once, it updates everywhere it's used
+
+2. DRAG & DROP
+   - Drop files anywhere on the page to add to CBank
+   - Drag items in canvas to reorder
+
+3. PREVIEW
+   - Exported HTML shows exactly how your blend will look
+   - Use browser DevTools to test responsive behavior
+
+4. MEDIA OPTIMIZATION
+   - YouTube videos automatically generate QR codes
+   - Thumbnails auto-selected for video previews
+   - Images scales responsively
+
+5. API ACCESS
+   - Full REST API available at http://localhost:8000/api
+   - See API documentation at http://localhost:8000/docs
+   - Automate content creation with scripts
+
+================================================================================
+KEYBOARD SHORTCUTS
+================================================================================
+
+Ctrl+1     : Switch to CBank tab
+Ctrl+2     : Switch to CBlend tab
+Ctrl+S     : Save current blend (auto-saved)
+Escape     : Close modals/dialogs
+Enter      : Confirm actions
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Q: Items not showing in CBank?
+A: Wait 2-3 seconds after adding. API needs to sync. Refresh page if needed.
+
+Q: Video not appearing?
+A: Only YouTube and direct video URLs work. Check the URL format.
+   YouTube format: youtube.com/watch?v=VIDEOID
+
+Q: Image not loading?
+A: Ensure image URL is publicly accessible and CORS-enabled.
+   Test URL in browser first.
+
+Q: Backend not running?
+A: Check if BaseX server is running (see readme.txt)
+   Run: basexhttp &
+   Then restart: python start.py
+
+Q: Exports are empty?
+A: Ensure you have items in your blend.
+   Check browser console for errors (F12).
+
+================================================================================
+API ENDPOINTS (for developers)
+================================================================================
+
+Content Bank:
+- GET  /api/bank - Get all items
+- POST /api/bank/text - Add text item
+- POST /api/bank/image-url - Add image URL
+- POST /api/bank/video-url - Add video URL
+- POST /api/bank/upload - Upload file
+- DELETE /api/bank/{id} - Delete item
+
+Blends:
+- GET /api/blends - Get all blends
+- POST /api/blends - Create new blend
+- PUT /api/blends/{id} - Update blend
+- DELETE /api/blends/{id} - Delete blend
+
+Exports:
+- GET /api/bank/export/xml - Export bank as XML
+- GET /api/blends/{id}/export/html - Export blend as HTML
+- GET /api/blends/{id}/export/xml - Export blend as XML
+
+Health:
+- GET /api/health - API status check
+
+Full documentation: http://localhost:8000/docs
+
+================================================================================
+NEED HELP?
+================================================================================
+
+Check these files for more information:
+- readme.txt : Technical architecture & BaseX integration
+- BASEX_SETUP.md : BaseX database setup instructions
+- BEGINNERS_GUIDE.md : XML schema explanation
+
+Questions? Check the backend/main.py and frontend/app.js code - heavily commented!
+
+================================================================================

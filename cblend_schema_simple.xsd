@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://contentrepurpose.com/cblend"
+           xmlns:cbl="http://contentrepurpose.com/cblend"
+           elementFormDefault="qualified">
+
+
+    <xs:element name="CBlend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="Purpose" type="xs:string" minOccurs="0"/>
+                <xs:element name="CreatedBy" type="xs:string"/>
+                <xs:element name="CreatedDate" type="xs:date"/>                
+                <xs:element name="TargetPlatform" type="cbl:PlatformType" minOccurs="0"/>                
+                <xs:element name="SelectedBlocks" type="cbl:SelectedBlocksType"/>                
+                <xs:element name="Modifications" type="cbl:ModificationsType" minOccurs="0"/>
+            </xs:sequence>
+            
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="status" type="cbl:StatusType" default="draft"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="PlatformType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="blog"/>
+            <xs:enumeration value="social-media"/>
+            <xs:enumeration value="email"/>
+            <xs:enumeration value="presentation"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="draft"/>
+            <xs:enumeration value="in-progress"/>
+            <xs:enumeration value="completed"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="SelectedBlocksType">
+        <xs:sequence>
+            <xs:element name="BlockReference" type="cbl:BlockReferenceType" 
+                        minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BlockReferenceType">
+        <xs:sequence>
+            <xs:element name="Position" type="xs:positiveInteger"/>
+            <xs:element name="Notes" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="blockId" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ModificationsType">
+        <xs:sequence>
+            <xs:element name="Modification" type="cbl:ModificationType" 
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ModificationType">
+        <xs:sequence>
+            <xs:element name="Type" type="cbl:ModificationTypeEnum"/>
+            <xs:element name="Description" type="xs:string" minOccurs="0"/>
+            <xs:element name="AppliedDate" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="ModificationTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="tone-change"/>
+            <xs:enumeration value="expand"/>
+            <xs:enumeration value="summarize"/>
+            <xs:enumeration value="translate"/>
+            <xs:enumeration value="reformat"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

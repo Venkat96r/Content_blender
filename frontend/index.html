@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Blender Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nlogo">Blender<span>Studio</span></div>
+  <button class="nbtn active" id="nav-bank" onclick="showPage('bank')">
+    CBank <span class="nbadge" id="badge-bank">0</span>
+  </button>
+  <button class="nbtn" id="nav-blend" onclick="showPage('blend')">
+    CBlend <span class="nbadge" id="badge-blend">0</span>
+  </button>
+  <div class="nspacer"></div>
+  <div class="napi"><div class="ndot" id="api-dot"></div><span>API</span></div>
+</nav>
+
+<!-- GLOBAL DROP OVERLAY -->
+<div id="gdo">
+  <div class="gdo-plus">+</div>
+  <div class="gdo-txt">Drop to add to CBank</div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div id="tc"></div>
+
+<!-- ADD CONTENT MODAL -->
+<div class="mo" id="add-modal" onclick="closeAddModal()">
+  <div class="mbox" onclick="event.stopPropagation()">
+    <div class="mhdr">
+      <h2>Add Content to Bank</h2>
+      <button class="mclose" onclick="closeAddModal()">&#x2715;</button>
+    </div>
+    <div class="mtabs">
+      <button class="mtab active" id="tab-text-btn"    onclick="switchTab('text')">Text</button>
+      <button class="mtab"        id="tab-img-url-btn" onclick="switchTab('img-url')">Image URL</button>
+      <button class="mtab"        id="tab-vid-url-btn" onclick="switchTab('vid-url')">Video URL</button>
+      <button class="mtab"        id="tab-upload-btn"  onclick="switchTab('upload')">Upload</button>
+    </div>
+    <div class="mbody">
+      <!-- TEXT -->
+      <div class="mpane active" id="tab-text">
+        <div class="fld">
+          <label>Title *</label>
+          <input type="text" id="txt-title" placeholder="Enter title...">
+        </div>
+        <div class="fld">
+          <label>Body *</label>
+          <textarea id="txt-body" rows="5" placeholder="Enter content..."></textarea>
+        </div>
+        <div class="fld">
+          <label>Author</label>
+          <input type="text" id="txt-author" placeholder="Anonymous">
+        </div>
+      </div>
+      <!-- IMAGE URL -->
+      <div class="mpane" id="tab-img-url">
+        <div class="fld">
+          <label>Title *</label>
+          <input type="text" id="iu-title" placeholder="Enter title...">
+        </div>
+        <div class="fld">
+          <label>Image URL *</label>
+          <input type="url" id="iu-url" placeholder="https://..." oninput="prevImg()">
+        </div>
+        <div id="iprev"><img id="iprev-img" src="" alt="Preview"></div>
+        <div class="fld">
+          <label>Alt Text</label>
+          <input type="text" id="iu-alt" placeholder="Descriptive alt text">
+        </div>
+        <div class="fld">
+          <label>Caption</label>
+          <input type="text" id="iu-cap" placeholder="Optional caption...">
+        </div>
+      </div>
+      <!-- VIDEO URL -->
+      <div class="mpane" id="tab-vid-url">
+        <div class="fld">
+          <label>Title *</label>
+          <input type="text" id="vu-title" placeholder="Enter title...">
+        </div>
+        <div class="fld">
+          <label>Video URL *</label>
+          <input type="url" id="vu-url" placeholder="https://youtube.com/watch?v=..." oninput="checkYt()">
+        </div>
+        <div id="ythint">&#9654; YouTube detected — embed + thumbnail will be generated automatically.</div>
+        <div class="fld">
+          <label>Caption</label>
+          <input type="text" id="vu-cap" placeholder="Optional caption...">
+        </div>
+      </div>
+      <!-- UPLOAD -->
+      <div class="mpane" id="tab-upload">
+        <div id="dz" onclick="document.getElementById('fi').click()" ondragover="dzOv(event)" ondragleave="dzLv()" ondrop="dzDp(event)">
+          <div class="dz-icon" id="dz-icon">&#128196;</div>
+          <div class="dz-text" id="dz-text">Click or drag &amp; drop a file</div>
+          <div class="dz-sub"  id="dz-sub">Images and videos accepted</div>
+        </div>
+        <input type="file" id="fi" accept="image/*,video/*" style="display:none" onchange="setFile(this.files[0])">
+        <div class="fld">
+          <label>Title *</label>
+          <input type="text" id="up-title" placeholder="Enter title...">
+        </div>
+        <div class="fld">
+          <label>Caption</label>
+          <input type="text" id="up-cap" placeholder="Optional caption...">
+        </div>
+      </div>
+    </div>
+    <div class="mfooter">
+      <button class="btn-ghost"   onclick="closeAddModal()">Cancel</button>
+      <button class="btn-primary" id="add-btn" onclick="submitAdd()">Add to Bank</button>
+    </div>
+  </div>
+</div>
+
+<!-- CBANK PAGE -->
+<div class="page active" id="page-bank">
+  <div class="ph">
+    <div class="ph-l">
+      <h1>Content Bank</h1>
+      <p id="bank-sub">Loading...</p>
+    </div>
+    <button class="btn-primary" onclick="openAddModal()">+ Add Content</button>
+  </div>
+  <div class="fbar">
+    <input type="text" id="search-input" placeholder="Search by title or ID..." oninput="renderBank()">
+    <button class="chip active" id="chip-all"   onclick="setFilter(this,'all')">All</button>
+    <button class="chip"        id="chip-text"  onclick="setFilter(this,'text')">Text</button>
+    <button class="chip"        id="chip-image" onclick="setFilter(this,'image')">Images</button>
+    <button class="chip"        id="chip-video" onclick="setFilter(this,'video')">Videos</button>
+  </div>
+  <div id="bank-grid"></div>
+</div>
+
+<!-- CBLEND PAGE -->
+<div class="page" id="page-blend">
+  <div class="ph">
+    <div class="ph-l">
+      <h1>Blend Studio</h1>
+    </div>
+    <button class="btn-primary" onclick="openEditor(null, null)">+ New Blend</button>
+  </div>
+
+  <div id="template-section">
+    <h2 style="margin-bottom:12px;">Start with a Template</h2>
+    <div class="template-grid">
+      <div class="template-card" onclick="useTemplate('grid')">
+        <div class="tpl-preview grid"><div></div><div></div><div></div></div>
+        <span>Grid</span>
+      </div>
+      <div class="template-card" onclick="useTemplate('hero')">
+        <div class="tpl-preview hero"><div></div><div></div><div></div></div>
+        <span>Hero</span>
+      </div>
+      <div class="template-card" onclick="useTemplate('sidebar')">
+        <div class="tpl-preview sidebar"><div></div><div></div></div>
+        <span>Sidebar</span>
+      </div>
+      <div class="template-card" onclick="useTemplate('mixed')">
+        <div class="tpl-preview mixed"><div></div><div></div><div></div><div></div></div>
+        <span>Mixed</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="blend-stats"></div>
+  <div id="editor-wrap"></div>
+  <div id="blend-grid"></div>
+</div>
+
+<!-- CANVAS PAGE -->
+<div id="canvas-page">
+  <div class="sbar">
+    <button class="sback" onclick="closeCanvas()">&#8592; Blends</button>
+    <div class="sbdivider"></div>
+    <input type="text" id="stitle" placeholder="Blend Title..." oninput="cvTitleChange()">
+    <div class="sbdivider"></div>
+    <button class="tbtn web" id="sbtn-web" onclick="cvSetTarget('Web')">Web</button>
+    <button class="tbtn"     id="sbtn-pdf" onclick="cvSetTarget('PDF')">PDF</button>
+    <div class="sbdivider"></div>
+    <div class="svpbtns">
+      <button class="svpbtn active" id="vp-d" onclick="cvSetVp('desktop')">D</button>
+      <button class="svpbtn"        id="vp-t" onclick="cvSetVp('tablet')">T</button>
+      <button class="svpbtn"        id="vp-m" onclick="cvSetVp('mobile')">M</button>
+    </div>
+    <div class="sbdivider"></div>
+    <button class="sxmlbtn" id="xmlbtn" onclick="cvToggleXml()">&#60;/&#62; XML</button>
+    <a id="exp-link" href="#" target="_blank">&#8599; HTML</a>
+    <div class="sbdivider"></div>
+    <button class="ssavebtn" onclick="cvSave()">Save</button>
+    <span id="sstatus"></span>
+  </div>
+  <div class="sbody">
+    <div class="layers">
+      <div class="layers-hdr" id="layers-hdr">Layers</div>
+      <div id="llist"></div>
+    </div>
+    <div class="carea" onclick="cvDesel()">
+      <div class="cframe" id="cframe">
+        <div class="cchrome">
+          <div class="cdot" style="background:#ff5f57"></div>
+          <div class="cdot" style="background:#febc2e"></div>
+          <div class="cdot" style="background:#28c840"></div>
+          <div class="curl" id="cvurl">blend/</div>
+        </div>
+        <div class="cblocks" id="cblocks"></div>
+      </div>
+      <div id="xdrawer"><pre id="xprev"></pre></div>
+    </div>
+    <div class="props">
+      <div class="props-hdr">Properties</div>
+      <div id="pbody">
+        <div class="empty-state">
+          <div class="es-icon">[ ]</div>
+          <p>Select a block to edit its properties</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS: load order matters — app.js (shared state + init) must come last -->
+<script src="bank.js"></script>
+<script src="blend.js"></script>
+<script src="canvas.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
